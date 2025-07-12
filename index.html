@@ -44,10 +44,10 @@
     .card { background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,.08); padding: 1.5rem; text-align: center; transition: transform .2s; }
     .card:hover { transform: translateY(-4px); }
     .card h3 { margin-top: .75rem; font-size: 1.2rem; color: var(--primary); }
-    .sermons { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.5rem; }
-    .sermon { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
-    .sermon img { width: 100%; }
-    .sermon-content { padding: 1rem; }
+    .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.5rem; }
+    .video { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+    .video img { width: 100%; }
+    .video-content { padding: 1rem; }
     .events-list { list-style: none; display: grid; gap: 1rem; }
     .event { padding: 1rem 1.25rem; border-left: 4px solid var(--accent); background: #fff; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,.05); display: flex; justify-content: space-between; align-items: center; }
     .event-date { font-weight: 700; color: var(--primary); }
@@ -78,7 +78,7 @@
     }
     /* ---------- Hover pop-up animation ---------- */
     .video,
-    .sermon
+    .video
     {
       transition:
         transform 0.3s cubic-bezier(.2,.8,.4,1),
@@ -87,7 +87,7 @@
     }
 
     .video:hover,
-    .sermon:hover,
+    .video:hover,
     .video:focus-within,   /* keyboard users get it too   */
     .card:hover,
     .card:focus-within,
@@ -118,17 +118,17 @@
   /* ➜ Flip-card container takes existing grid spacing */
   /* ▸ GRID ----------------------------------------------------- */
   /* ministries grid: exactly 2 columns on any screen ≥ 480 px */
-.ministry-grid {
-  display: grid;
-  gap: 1rem;
+  .ministry-grid {
+    display: grid;
+    gap: 1rem;
 
-  /* two equal-width columns */
-  grid-template-columns: repeat(2, 1fr);
+    /* two equal-width columns */
+    grid-template-columns: repeat(2, 1fr);
 
-  /* optional: cap width & center as before */
-  max-width: 700px;
-  margin: 0 auto;
-}
+    /* optional: cap width & center as before */
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
 
 
@@ -196,16 +196,11 @@
 <body>
   <header>
     <div class="nav">
-      <!-- <a href="#" class="nav-logo">
-        <img src="assets/images/logo.jpeg" alt="NLIC logo">
-        <span style="display:none">NLIC Church</span>
-      </a> -->
       <div class="nav-logo">New Life Indian Church</div>
-      
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#ministries">Ministries</a>
-        <a href="#sermons">Videos</a>
+        <a href="#videos">Videos</a>
         <a href="#events">Events</a>
         <a href="#map">Find&nbsp;Us</a>
         <a href="#contact">Contact</a>
@@ -213,15 +208,18 @@
     </div>
   </header>
 
+
+  <!-- MAIN HEADING / WELCOME MESSAGE -->
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to <br>
         NEW LIFE INDIAN CHURCH</h1>
       <p>A community of faith, hope & love in the heart of Pittsburgh.</p>
-      <!-- <a class="btn" href="#visit">Plan Your Visit</a> -->
     </div>
   </section>
-
+  
+  
+  <!-- ABOUT US -->
   <section id="about">
     <div class="container about">
       <div>
@@ -232,43 +230,42 @@
     </div>
   </section>
 
-
-
+<!-- WORSHIP VIDEOS -->
   <section id="youtube video">
     <div class="container">
       <h2 class="section-title">Recent Worship Recordings</h2>
-      <div class="sermons">
-        <div class="sermon">
+      <div class="videos">
+        <div class="video">
           <a href="https://www.youtube.com/watch?v=8g3yUYeMgYI" target="_blank" rel="noopener noreferrer">
-          <img src="assets/images/worship_jun22.png" alt="Sermon 1">
-          <div class="sermon-content">
+          <img src="assets/images/worship_jun22.png" alt="video 1">
+          <div class="video-content">
             <h3>English Worship</h3>
             <p>June 22, 2025</p>
           </div>
           </a>
         </div>
-        <div class="sermon">
+        <div class="video">
           <a href="https://youtu.be/5cfTmg9t5Z4?si=zp-q997ztVTjwZJb" target="_blank" rel="noopener noreferrer">
-          <img src="assets/images/worship_telugu_jun8.png" alt="Sermon 2">
-          <div class="sermon-content">
+          <img src="assets/images/worship_telugu_jun8.png" alt="video 2">
+          <div class="video-content">
             <h3>Telugu Worship</h3>
             <p>June 8, 2025</p>
           </div>
           </a>
         </div>
-        <div class="sermon">
+        <div class="video">
           <a href="https://youtu.be/j2giL60lrck" target="_blank" rel="noopener noreferrer">
-          <img src="assets/images/worship_jun1.png" alt="Sermon 1">
-          <div class="sermon-content">
+          <img src="assets/images/worship_jun1.png" alt="video 1">
+          <div class="video-content">
             <h3>English Worship</h3>
             <p>June 1, 2025</p>
           </div>
           </a>
         </div>
-        <div class="sermon">
+        <div class="video">
           <a href="https://www.youtube.com/watch?v=mwKl4FLzm3I" target="_blank" rel="noopener noreferrer">
-          <img src="assets/images/house_prayer.jpg" alt="Sermon 3">
-          <div class="sermon-content">
+          <img src="assets/images/house_prayer.jpg" alt="video 3">
+          <div class="video-content">
             <h3>House Prayer Worship</h3>
             <p>Jan, 2025</p>
           </div>
@@ -278,22 +275,16 @@
     </div>
   </section>
 
-  <!-- ▸ MINISTRIES  -->
+  <!--  MINISTRIES  -->
   <section id="ministries">
     <h2 class="section-title">Our Ministries</h2>
-
     <div class="ministry-grid">
-
-      <!-- card 1 -->
       <div class="m-card">
         <div class="m-inner">
-          <!-- FRONT (image + overlay text) -->
           <div class="m-front">
             <img src="assets/images/ministrires-kids.jpg" alt="Kids">
             <h3>Kids</h3>
           </div>
-
-          <!-- BACK -->
           <div class="m-back">
             <h3>Kids Ministry</h3>
             <p>We have Sunday School every Sunday from 2PM - 3PM for the kids.</p>
@@ -301,7 +292,6 @@
         </div>
       </div>
 
-      <!-- duplicate this .m-card for each ministry ------------ -->
       <div class="m-card">
         <div class="m-inner">
           <div class="m-front">
@@ -345,7 +335,7 @@
   </section>
 
 
-  <!-- ::: Photo Carousel ::: -->
+  <!-- GALLERY -->
   <section id="gallery">
     <div class="container">
       <h2 class="section-title">Gallery</h2>
@@ -353,62 +343,54 @@
       <!-- Swiper wrapper -->
       <div class="swiper myGallery">
         <div class="swiper-wrapper">
-
-          <!-- 1 photo -->
           <div class="swiper-slide">
             <img src="assets/images/pic1.jpg"
                 loading="lazy">
           </div>
-
-          <!-- 2 photo -->
           <div class="swiper-slide">
             <img src="assets/images/pic2.jpg"
                 loading="lazy">
           </div>
-
-          <!-- 3 photo -->
           <div class="swiper-slide">
             <img src="assets/images/pic3.jpg"
                 loading="lazy">
           </div>
-
           <div class="swiper-slide">
             <img src="assets/images/pic4.jpg"
                 loading="lazy">
           </div>
-
           <div class="swiper-slide">
             <img src="assets/images/pic5.jpg"
                 loading="lazy">
           </div>
-
           <div class="swiper-slide">
             <img src="assets/images/pic6.jpg"
                 loading="lazy">
           </div>
-
-          
         </div>
 
-        <!-- Optional arrows -->
+        <!-- Arrows for navigation -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
-        <!-- Optional pagination dots -->
+        <!-- Pagination dots -->
         <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
 
+
+  <!-- MAP -->
   <section id="map">
     <div class="container">
       <h2 class="section-title">Find&nbsp;Us</h2>
-  
+      
+      <!-- Interactive Map -->
       <div class="map-responsive">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30329.89974398701!2d-80.04016109315036!3d40.430000614484825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f660064c6c3f%3A0xe61b19e235b758bd!2sCalvary%20Chapel!5e0!3m2!1sen!2sus!4v1751609538965!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
   
-      <!-- optional directions button -->
+      <!-- Directions button -->
       <p style="text-align:center;margin-top:1.25rem;">
         <a class="btn"
            href="https://www.google.com/maps/dir/?api=1&destination=2240 Noblestown Rd, Pittsburgh, PA 15205"
@@ -419,6 +401,8 @@
       </p>
     </div>
   </section>
+
+  <!-- EVENTS SCHEDULE -->
   <section id="events">
     <div class="container">
       <h2 class="section-title">Upcoming Events</h2>
@@ -431,6 +415,8 @@
     </div>
   </section>
 
+
+  <!-- CONTACT & SOCIALS -->
   <footer id="contact">
     <div class="footer-content">
       <p>© 2025 New Life Indian Church · 2240 Noblestown Rd, Pittsburgh, PA 15205 · Sunday Services: 4PM - 6PM</p>
@@ -441,6 +427,8 @@
     </div>
   </footer>
 
+
+  <!-- Swiper JS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const gallery = new Swiper('.myGallery', {
