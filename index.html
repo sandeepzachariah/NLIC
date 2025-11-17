@@ -32,6 +32,8 @@
           <i data-feather="cross" class="text-blue-600"></i>
           <span class="heading-font text-xl font-bold text-blue-700">New Life Indian Church</span>
         </a>
+  
+        <!-- Desktop links -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="#about" class="text-blue-700 font-medium">About</a>
           <a href="#ministries" class="text-gray-700 hover:text-blue-700">Ministries</a>
@@ -41,9 +43,24 @@
           <a href="#beliefs" class="text-gray-700 hover:text-blue-700">Beliefs</a>
           <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
         </div>
-        <button class="md:hidden focus:outline-none" aria-label="Open menu">
+  
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Open menu">
           <i data-feather="menu" class="text-gray-700"></i>
         </button>
+      </div>
+  
+      <!-- Mobile links: hidden by default -->
+      <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-2">
+        <a href="#about" class="block text-gray-700 hover:text-blue-700">About</a>
+        <a href="#ministries" class="block text-gray-700 hover:text-blue-700">Ministries</a>
+        <a href="#sermons" class="block text-gray-700 hover:text-blue-700">Media</a>
+        <a href="#events" class="block text-gray-700 hover:text-blue-700">Events</a>
+        <a href="#visit" class="block text-gray-700 hover:text-blue-700">Plan Your Visit</a>
+        <a href="#beliefs" class="block text-gray-700 hover:text-blue-700">Beliefs</a>
+        <a href="#contact" class="block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition w-fit">
+          Contact
+        </a>
       </div>
     </div>
   </nav>
